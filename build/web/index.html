@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Student Registration</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght=300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h2>Student Registration</h2>
+            <p class="subtitle">Join our advanced learning platform</p>
+            
+            <form action="RegisterServlet" method="POST">
+                <div class="input-group">
+                    <input type="text" name="fullname" required>
+                    <label>Full Name</label>
+                </div>
+                
+                <div class="input-group">
+                    <input type="email" name="email" required>
+                    <label>Email Address</label>
+                </div>
+
+                <div class="row">
+                    <div class="input-group">
+                        <input type="text" name="phone" required>
+                        <label>Phone Number</label>
+                    </div>
+                    <div class="input-group">
+                        <input type="date" name="dob" required>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <select name="course" required>
+                        <option value="" disabled selected hidden></option>
+                        <option value="se">Software Engineering</option>
+                        <option value="cs">Computer Science</option>
+                        <option value="ds">Data Science</option>
+                    </select>
+                    <label class="select-label">Select Course</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" name="password" required>
+                    <label>Password</label>
+                </div>
+
+                <button type="submit" class="btn-submit">Register Now</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

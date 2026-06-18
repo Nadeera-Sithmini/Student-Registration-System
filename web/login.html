@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght=300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h2>Student Login</h2>
+            <p class="subtitle">Welcome back! Please login to your account</p>
+            
+            <form action="LoginServlet" method="POST" id="loginForm">
+                <div class="input-group">
+                    <input type="email" name="email" required>
+                    <label>Email Address</label>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" name="password" required>
+                    <label>Password</label>
+                </div>
+
+                <button type="submit" class="btn-submit">Login Now</button>
+                
+                <p style="margin-top: 20px; font-size: 0.9rem; color: #aaa;">
+                    Don't have an account? <a href="index.html" style="color: #66fcf1; text-decoration: none; font-weight: 600;">Register Here</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // පොඩි ජාවාස්ක්‍රිප්ට් වැලිඩේෂන් එකක් ලොගින් ෆෝම් එකටම
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            let password = document.querySelector('input[name="password"]').value;
+            if (password.length < 6) {
+                alert("Password ekata aduma tharame akuru 6k wath thiyenna oni!");
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
