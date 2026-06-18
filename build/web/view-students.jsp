@@ -127,11 +127,11 @@
             <a href="index.html" style="color: #66fcf1; text-decoration: none; font-weight: 600;">+ Add New Student</a>
         </div>
         
-        <!-- මෙන්න අලුතින්ම එකතු කරපු Search Form එක -->
+
         <form method="GET" action="view-students.jsp">
             <div class="search-container">
                 <% 
-                    // කලින් සර්ච් කරපු අකුරක් තියෙනවා නම් ඒක ආයේ බාර් එකේ පෙන්වන්න ගන්නවා
+                    
                     String searchQuery = request.getParameter("search");
                     if(searchQuery == null) searchQuery = "";
                 %>
@@ -172,7 +172,7 @@
                             stmt.setString(1, "%" + searchQuery + "%");
                             stmt.setString(2, "%" + searchQuery + "%");
                         } else {
-                            // කිසිවක් සර්ච් කර නැත්නම් සාමාන්‍ය පරිදි ඔක්කොම පෙන්වනවා
+                           
                             sql = "SELECT * FROM students";
                             stmt = conn.prepareStatement(sql);
                         }
@@ -197,7 +197,7 @@
                 </tr>
                 <%
                         }
-                        // කිසිම ශිෂ්‍යයෙක් හොයාගන්න බැරි වුණොත් වැටෙන මැසේජ් එක
+                        
                         if(!hasData) {
                             out.println("<tr><td colspan='7' style='text-align:center; padding: 20px; color: #ff4d4d;'>No students found matching your search.</td></tr>");
                         }
